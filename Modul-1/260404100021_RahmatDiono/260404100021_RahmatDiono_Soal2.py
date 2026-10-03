@@ -11,7 +11,3 @@ print("\n=== hasil perhitungan ====")
 print(f"Total jarak tempuh : {jarak_tempuh} km")
 print(f"Total kebutuhan BBM : {bbm_beli} liter")
 print(f"Total biaya BBM : Rp{total_biaya}")
-
-nilai  = 80
-if nilai >= 80:
-    print("lulus")
