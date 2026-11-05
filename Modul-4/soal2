@@ -1,0 +1,51 @@
+total_gaji = 0
+jumlah_hari = 7
+gaji_pokok = 100000
+upah1 = 25000
+bonus = 50000
+total_seminggu = 0
+upah_lembur = 0
+
+
+for hari in range(1, jumlah_hari+1):
+    print(f"hari ke -{hari}")
+
+    while True :
+        lembur =int(input("Masukkan Jam lembur : "))
+        if lembur == 0 :
+            break
+        elif lembur not in range (1, 9) :
+            print("Jumlah Lembur Melebihi Batas! ")
+            continue
+
+        elif lembur <= 3 :
+            print(f"Dapat Upah {lembur * upah1} ")
+            upah_lembur = lembur * upah1
+        elif lembur == 4  :
+            upah_lembur = 100000
+            print("Dapat Upah 100000")
+        elif lembur == 6 :
+            upah_lembur = 200000
+            print("Dapat Upah 200000")
+        elif lembur == 8 :
+            upah_lembur = 300000
+            print("Dapat Upah 300000")
+        else :
+            upah_lembur = 0
+        break
+
+    shift = str(input("Apakah Shift Malam? (ya/tidak) "))
+    if shift == "ya" :
+        print("Bonus" , bonus)
+        shift = bonus
+    else :
+        print("tidak dapat bonus")
+        shift = 0   
+
+    total_gaji_hari = gaji_pokok + upah_lembur + shift
+    total_seminggu += total_gaji_hari
+
+    print(f"Gaji Hari ke - {hari} : Rp {total_gaji_hari}")
+
+print(f"Gaji Selama 1 minggu : Rp {total_seminggu}")
+

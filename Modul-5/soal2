@@ -1,0 +1,12 @@
+def palindrom(kata):
+    if kata == kata[::-1]:
+        return True
+    else:
+        return False
+
+kata = str(input("Masukkan kata: "))
+if palindrom(kata):
+    print("merupakan palindrom")
+else:
+    print("bukan palindrom")
+    

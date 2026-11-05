@@ -1,0 +1,12 @@
+Baris = int(input("Masukkan Jumlah Baris Lampu : "))
+jumlah_lampu = int(input("Masukkan Jumlah Lampu : "))
+for i in range(1,Baris+1):
+    print ("baris ke - ", i)
+
+    for h in range (1, jumlah_lampu+1):
+        if h % 3 == 0 :
+            print(f"Lampu Nomor {h} : mengalami gangguan")
+        else :
+            print(f"Lampu Nomor {h} : kembali normal")
+
+print("Peringatan untuk memeriksa sumber listrik utama taman")
