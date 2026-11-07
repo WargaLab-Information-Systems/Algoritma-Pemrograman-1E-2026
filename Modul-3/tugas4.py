@@ -30,4 +30,3 @@ for i in range(1, 11):
 
 
 print("\nJumlah penerima beasiswa penuh:", jumlah_beasiswa_penuh)
-print("Proses seleksi selesai.")
