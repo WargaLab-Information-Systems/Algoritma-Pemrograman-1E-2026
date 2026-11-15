@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="ALPRO-MODUL II"/>
+        <attribute name="authors" value="Hype"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-06 10:12:33 AM"/>
+        <attribute name="created" value="SHlwZTtIWVBFOzIwMjYtMTAtMDY7MDk6NTU6MDYgQU07MTk4Nw=="/>
+        <attribute name="edited" value="SHlwZTtIWVBFOzIwMjYtMTAtMDY7MTA6MTI6MzMgQU07MTsyMDgw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="kode, d1, d2, d3, pelacak, NpAwal, NpTahap1, nilaiAkhir" type="Integer" array="False" size=""/>
+            <declare name="status, siklus" type="String" array="False" size=""/>
+            <input variable="kode"/>
+            <assign variable="d1" expression="kode / 100"/>
+            <assign variable="d2" expression="(kode/10)%10"/>
+            <assign variable="d3" expression="kode % 10"/>
+            <assign variable="NpAwal" expression="d1 * d3"/>
+            <if expression="d2 % 2 == 1">
+                <then>
+                    <assign variable="NpTahap1" expression="NpAwal + 25"/>
+                </then>
+                <else>
+                    <assign variable="NpTahap1" expression="NpAwal - d2"/>
+                </else>
+            </if>
+            <if expression="NpTahap1 % 3 == 0">
+                <then>
+                    <assign variable="NilaiAkhir" expression="NpTahap1 / 3"/>
+                </then>
+                <else>
+                    <assign variable="NilaiAkhir" expression="NpTahap1 * 2"/>
+                </else>
+            </if>
+            <if expression="NilaiAkhir &gt; 50">
+                <then>
+                    <assign variable="status" expression="&quot;Kategori A&quot;"/>
+                </then>
+                <else>
+                    <if expression="NilaiAkhir &gt; 20">
+                        <then>
+                            <assign variable="status" expression="&quot;Kategori B&quot;"/>
+                        </then>
+                        <else>
+                            <assign variable="status" expression="&quot;Password Ditolak&quot;"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="NilaiAkhir % 2 == 0">
+                <then>
+                    <assign variable="siklus" expression="&quot;Siklus Genap&quot;"/>
+                </then>
+                <else>
+                    <assign variable="siklus" expression="&quot;Siklus Ganjil&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
